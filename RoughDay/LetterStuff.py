@@ -22,8 +22,15 @@ K1 = np.matrix('1 1 1 0 0 1 1; 0 1 0 0 1 0 0; 0 1 0 1 0 0 0; 0 1 1 0 0 0 0; 0 1 
 K2 = np.matrix('1 0 0 0 0 1 0; 1 0 0 0 1 0 0; 1 0 0 1 0 0 0; 1 0 1 0 0 0 0; 1 1 0 0 0 0 0; 1 0 1 0 0 0 0; 1 0 0 1 0 0 0; 1 0 0 0 1 0 0; 1 0 0 0 0 1 0')
 K3 = np.matrix('1 1 1 0 0 1 1; 0 1 0 0 1 0 0; 0 1 0 1 0 0 0; 0 1 1 0 0 0 0; 0 1 1 0 0 0 0; 0 1 0 1 0 0 0; 0 1 0 0 1 0 0; 0 1 0 0 0 1 0; 1 1 1 0 0 1 1')
 
+
+def activationfunction(n):
+    pass #if else stuff magic will happen
+
+def hardlimit(x):
+    pass
+
 def main():
-    print("I'm fucking done with life")
+    print("oops")
 
 
 if __name__ == "__main__":
