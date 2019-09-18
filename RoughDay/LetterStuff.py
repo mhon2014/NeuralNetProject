@@ -3,16 +3,18 @@ import numpy as np
 class NeuralNetwork():
     def __init__(self):
         # np.random.seed(1) ????
-        self.weights = np.array([[0] * 63]*7) #Weights random between 0-1
-        self.bias = np.array([0] * 7)      #Bias random
+        self.weights = np.array([[0] * 63]*7) #Weights initialized to 0
+        self.bias = np.array([0] * 7)      #Bias initialized to 0
 
 
     def hardlimit(self, x): #hardlimit function
         for i in range(len(x)):
             if x[i] > 0:
                 x[i] = 1
-            else:
+            elif x[i] == 0:
                 x[i] = 0
+            else:
+                x[i] = -1
         return x
 
     def update(self,w,e,p):                         #update weights
@@ -50,7 +52,7 @@ class NeuralNetwork():
             # print("Output:")
             # print(outputs)
             e = outputs - a
-
+            print("error:" ,e)
             # print("E:")
             # print(e)
 
@@ -158,9 +160,10 @@ if __name__ == "__main__":
     a = NeuralNetwork()
     # print(len(inputstuff()))
     print(inputstuff())
-    a.train(inputstuff(), target(), 5)
+    a.train(inputstuff(), target(), 4)
     print("Predict:")
     for i in range(21):
       print(a.predict(inputstuff()[i]))
     print(a.weights)
+    print(a.bias)
 
